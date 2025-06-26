@@ -1,4 +1,4 @@
-## Dirb
+# Dirb
 
 **Dirb** adalah *web content scanner* yang digunakan untuk mencari file atau direktori tersembunyi di dalam sebuah web server.
 
